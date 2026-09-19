@@ -1,0 +1,3070 @@
+{
+ "tasks": {
+  "ag_news": {
+   "title": "News topic (AG News)",
+   "category": "classification",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "fancyzhx/ag_news test, 200 sampled seed 7, balanced 50 per topic",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.82,
+      0.91
+     ],
+     "ece": 0.08949999999999993,
+     "acc_at_80": 0.9375,
+     "acc_at_50": 0.98,
+     "server_ms_median": 119.0,
+     "wall_ms_median": 981.0,
+     "in_tok": 98487,
+     "out_tok": 9708,
+     "cost_per_1k_items": 0.020682270000000003
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.825,
+      0.915
+     ],
+     "ece": 0.11970000000000001,
+     "acc_at_80": 0.90625,
+     "acc_at_50": 0.92,
+     "server_ms_median": 668.0,
+     "wall_ms_median": 983.0,
+     "in_tok": 60525,
+     "out_tok": 3881,
+     "cost_per_1k_items": 0.083811
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.865,
+     "ci": [
+      0.81,
+      0.91
+     ],
+     "ece": 0.12205000000000003,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.93,
+     "server_ms_median": 695.0,
+     "wall_ms_median": 994.5,
+     "in_tok": 60525,
+     "out_tok": 4089,
+     "cost_per_1k_items": 0.085059
+    }
+   }
+  },
+  "anli_r3": {
+   "title": "Adversarial natural language inference (ANLI R3)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/anli plain_text test_r3 split, 200 sampled seed 7, balanced (67 entailment / 67 neutral / 66 contradiction); the dataset's `reason` field is excluded from state because it explains the gold label",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.66,
+     "ci": [
+      0.59,
+      0.725
+     ],
+     "ece": 0.17609999999999998,
+     "acc_at_80": 0.69375,
+     "acc_at_50": 0.73,
+     "server_ms_median": 125.0,
+     "wall_ms_median": 992.0,
+     "in_tok": 115062,
+     "out_tok": 8598,
+     "cost_per_1k_items": 0.02416302
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.58,
+     "ci": [
+      0.505,
+      0.65
+     ],
+     "ece": 0.40480000000000005,
+     "acc_at_80": 0.60625,
+     "acc_at_50": 0.62,
+     "server_ms_median": 703.0,
+     "wall_ms_median": 997.0,
+     "in_tok": 75781,
+     "out_tok": 3934,
+     "cost_per_1k_items": 0.099385
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.54,
+     "ci": [
+      0.465,
+      0.61
+     ],
+     "ece": 0.43855000000000005,
+     "acc_at_80": 0.575,
+     "acc_at_50": 0.65,
+     "server_ms_median": 825.0,
+     "wall_ms_median": 1132.5,
+     "in_tok": 75781,
+     "out_tok": 7030,
+     "cost_per_1k_items": 0.11796100000000001
+    }
+   }
+  },
+  "arabic_sentiment": {
+   "title": "Arabic tweet sentiment (AJGT)",
+   "category": "multilingual",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "komari6/ajgt_twitter_ar (Arabic Jordanian General Tweets, human-labelled) config plain_text split train - the dataset ships only one split; 200 sampled seed 7, balanced 100 positive / 100 negative",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9539,
+     "ci": [
+      0.9263,
+      0.9769907963185274
+     ],
+     "accuracy": 0.875,
+     "brier": 0.088591,
+     "ece": 0.0435,
+     "acc_at_80": 0.94375,
+     "acc_at_50": 0.98,
+     "server_ms_median": 118.0,
+     "wall_ms_median": 981.5,
+     "in_tok": 74923,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.01573383
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9707,
+     "ci": [
+      0.944994499449945,
+      0.991492343108798
+     ],
+     "accuracy": 0.885,
+     "brier": 0.069808,
+     "ece": 0.054900000000000004,
+     "acc_at_80": 0.95625,
+     "acc_at_50": 0.98,
+     "server_ms_median": 736.5,
+     "wall_ms_median": 1029.0,
+     "in_tok": 36928,
+     "out_tok": 3200,
+     "cost_per_1k_items": 0.056128000000000004
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9725,
+     "ci": [
+      0.9420478430587529,
+      0.9938493849384938
+     ],
+     "accuracy": 0.93,
+     "brier": 0.05474301,
+     "ece": 0.021790000000000066,
+     "acc_at_80": 0.9875,
+     "acc_at_50": 0.98,
+     "server_ms_median": 985.0,
+     "wall_ms_median": 1301.0,
+     "in_tok": 36928,
+     "out_tok": 8945,
+     "cost_per_1k_items": 0.090598
+    }
+   }
+  },
+  "arc_challenge": {
+   "title": "Science exam questions (ARC-Challenge)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "allenai/ai2_arc ARC-Challenge test split, 200 sampled seed 7; answer options shuffled and re-keyed A..E with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.975,
+     "ci": [
+      0.95,
+      0.995
+     ],
+     "ece": 0.01520000000000003,
+     "acc_at_80": 0.9875,
+     "acc_at_50": 0.99,
+     "server_ms_median": 114.5,
+     "wall_ms_median": 980.0,
+     "in_tok": 83695,
+     "out_tok": 8993,
+     "cost_per_1k_items": 0.01757595
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.83,
+     "ci": [
+      0.78,
+      0.88
+     ],
+     "ece": 0.15790000000000004,
+     "acc_at_80": 0.8375,
+     "acc_at_50": 0.84,
+     "server_ms_median": 717.0,
+     "wall_ms_median": 1019.5,
+     "in_tok": 46065,
+     "out_tok": 3784,
+     "cost_per_1k_items": 0.06876900000000001
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.82,
+      0.915
+     ],
+     "ece": 0.11724999999999995,
+     "acc_at_80": 0.89375,
+     "acc_at_50": 0.89,
+     "server_ms_median": 811.0,
+     "wall_ms_median": 1105.5,
+     "in_tok": 46065,
+     "out_tok": 4754,
+     "cost_per_1k_items": 0.07458899999999999
+    }
+   }
+  },
+  "banking77": {
+   "title": "Banking intent among 77 (Banking77)",
+   "category": "classification",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "mteb/banking77 test (parquet mirror of PolyAI/banking77, whose loading script the HF dataset viewer cannot run), 200 sampled seed 7, 2 per intent plus a 3rd for 46 randomly chosen intents; all 77 intents are offered as options on every item",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.815,
+     "ci": [
+      0.76,
+      0.865
+     ],
+     "ece": 0.09110000000000004,
+     "acc_at_80": 0.9125,
+     "acc_at_50": 0.99,
+     "server_ms_median": 124.0,
+     "wall_ms_median": 995.0,
+     "in_tok": 435322,
+     "out_tok": 165670,
+     "cost_per_1k_items": 0.09141762
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.82,
+      0.915
+     ],
+     "ece": 0.11349999999999988,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.99,
+     "server_ms_median": 842.0,
+     "wall_ms_median": 1138.5,
+     "in_tok": 351280,
+     "out_tok": 4336,
+     "cost_per_1k_items": 0.37729599999999996
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.86,
+     "ci": [
+      0.815,
+      0.905
+     ],
+     "ece": 0.10905000000000004,
+     "acc_at_80": 0.94375,
+     "acc_at_50": 0.99,
+     "server_ms_median": 828.5,
+     "wall_ms_median": 1113.5,
+     "in_tok": 351280,
+     "out_tok": 5312,
+     "cost_per_1k_items": 0.38315199999999994
+    }
+   }
+  },
+  "boolq": {
+   "title": "Yes/no reading comprehension (BoolQ)",
+   "category": "understanding",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "google/boolq validation, passages under 6000 chars, 200 sampled seed 7, balanced 100 yes / 100 no",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9692,
+     "ci": [
+      0.9450005004504054,
+      0.9877694235588973
+     ],
+     "accuracy": 0.915,
+     "brier": 0.0621075,
+     "ece": 0.022050000000000063,
+     "acc_at_80": 0.96875,
+     "acc_at_50": 0.98,
+     "server_ms_median": 120.5,
+     "wall_ms_median": 986.0,
+     "in_tok": 101399,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.02129379
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.95765,
+     "ci": [
+      0.9292975040257649,
+      0.9802183493589743
+     ],
+     "accuracy": 0.89,
+     "brier": 0.090183,
+     "ece": 0.08509999999999997,
+     "acc_at_80": 0.9375,
+     "acc_at_50": 0.97,
+     "server_ms_median": 834.0,
+     "wall_ms_median": 1119.0,
+     "in_tok": 64793,
+     "out_tok": 3020,
+     "cost_per_1k_items": 0.082913
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.95205,
+     "ci": [
+      0.9187297077922078,
+      0.9765976597659766
+     ],
+     "accuracy": 0.905,
+     "brier": 0.081842,
+     "ece": 0.06990000000000003,
+     "acc_at_80": 0.95625,
+     "acc_at_50": 0.94,
+     "server_ms_median": 776.0,
+     "wall_ms_median": 1062.5,
+     "in_tok": 64793,
+     "out_tok": 3425,
+     "cost_per_1k_items": 0.085343
+    }
+   }
+  },
+  "commonsense_qa": {
+   "title": "Commonsense question answering (CommonsenseQA)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "tau/commonsense_qa validation split, 200 sampled seed 7; answer options shuffled and re-keyed A..E with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.82,
+      0.92
+     ],
+     "ece": 0.04869999999999994,
+     "acc_at_80": 0.94375,
+     "acc_at_50": 0.97,
+     "server_ms_median": 116.0,
+     "wall_ms_median": 990.5,
+     "in_tok": 82823,
+     "out_tok": 10400,
+     "cost_per_1k_items": 0.01739283
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.775,
+     "ci": [
+      0.71,
+      0.835
+     ],
+     "ece": 0.17285000000000003,
+     "acc_at_80": 0.81875,
+     "acc_at_50": 0.86,
+     "server_ms_median": 755.5,
+     "wall_ms_median": 1046.5,
+     "in_tok": 43968,
+     "out_tok": 3798,
+     "cost_per_1k_items": 0.06675600000000001
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.775,
+     "ci": [
+      0.72,
+      0.83
+     ],
+     "ece": 0.17550000000000004,
+     "acc_at_80": 0.84375,
+     "acc_at_50": 0.84,
+     "server_ms_median": 808.5,
+     "wall_ms_median": 1141.5,
+     "in_tok": 43968,
+     "out_tok": 5201,
+     "cost_per_1k_items": 0.07517399999999999
+    }
+   }
+  },
+  "counting": {
+   "title": "Counting fruits in a list",
+   "category": "known_weakness",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "synthetic, generated by code with seed 7 from fixed fruit / non-fruit word lists; gold is the code-computed count",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.8666666666666667,
+     "ci": [
+      0.8066666666666666,
+      0.92
+     ],
+     "ece": 0.07446666666666671,
+     "acc_at_80": 0.9583333333333334,
+     "acc_at_50": 1.0,
+     "server_ms_median": 100.5,
+     "wall_ms_median": 960.5,
+     "in_tok": 99551,
+     "out_tok": 16053,
+     "cost_per_1k_items": 0.027874279999999998
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.8733333333333333,
+     "ci": [
+      0.82,
+      0.92
+     ],
+     "ece": 0.12586666666666668,
+     "acc_at_80": 0.8666666666666667,
+     "acc_at_50": 0.8,
+     "server_ms_median": 686.0,
+     "wall_ms_median": 994.5,
+     "in_tok": 64669,
+     "out_tok": 2724,
+     "cost_per_1k_items": 0.10801733333333334
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9933333333333333,
+     "ci": [
+      0.98,
+      1.0
+     ],
+     "ece": 0.00660000000000005,
+     "acc_at_80": 0.9916666666666667,
+     "acc_at_50": 1.0,
+     "server_ms_median": 920.5,
+     "wall_ms_median": 1219.5,
+     "in_tok": 64669,
+     "out_tok": 6733,
+     "cost_per_1k_items": 0.14008933333333334
+    }
+   }
+  },
+  "date_compare": {
+   "title": "Date comparison across mixed formats",
+   "category": "known_weakness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic, generated by code with seed 7; calendar dates rendered in mixed formats (2024-03-05, 5 March 2024, 03/05/24 US-style with the convention stated in the state, 'the last day of February 2024'); gold computed in code, balanced true/false",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9933333333333333,
+     "ci": [
+      0.98,
+      1.0
+     ],
+     "accuracy": 0.9933333333333333,
+     "brier": 0.006804666666666667,
+     "ece": 0.04246666666666671,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 104.5,
+     "wall_ms_median": 970.0,
+     "in_tok": 62677,
+     "out_tok": 3000,
+     "cost_per_1k_items": 0.017549560000000002
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9533333333333334,
+     "ci": [
+      0.92,
+      0.9866666666666667
+     ],
+     "accuracy": 0.9533333333333334,
+     "brier": 0.046406666666666666,
+     "ece": 0.04613333333333325,
+     "acc_at_80": 0.9583333333333334,
+     "acc_at_50": 0.9733333333333334,
+     "server_ms_median": 699.5,
+     "wall_ms_median": 996.5,
+     "in_tok": 35521,
+     "out_tok": 2126,
+     "cost_per_1k_items": 0.06436933333333333
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.96,
+     "ci": [
+      0.9266666666666666,
+      0.9866666666666667
+     ],
+     "accuracy": 0.96,
+     "brier": 0.03960736,
+     "ece": 0.03924000000000005,
+     "acc_at_80": 0.975,
+     "acc_at_50": 0.9733333333333334,
+     "server_ms_median": 759.0,
+     "wall_ms_median": 1048.0,
+     "in_tok": 35521,
+     "out_tok": 2954,
+     "cost_per_1k_items": 0.07099333333333334
+    }
+   }
+  },
+  "double_negation": {
+   "title": "Permission under zero, one and two negations",
+   "category": "known_weakness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic, generated by code with seed 7; 10 base policy clauses rendered with 0, 1 or 2 negations; gold is the code-computed parity of the negations",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0019606666666666674,
+     "ece": 0.03846666666666667,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 111.0,
+     "wall_ms_median": 979.0,
+     "in_tok": 60198,
+     "out_tok": 3000,
+     "cost_per_1k_items": 0.01685544
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9933333333333333,
+     "ci": [
+      0.98,
+      1.0
+     ],
+     "accuracy": 0.9933333333333333,
+     "brier": 0.006605333333333333,
+     "ece": 0.0012000000000000899,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 658.5,
+     "wall_ms_median": 940.5,
+     "in_tok": 33628,
+     "out_tok": 2244,
+     "cost_per_1k_items": 0.06278933333333334
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.98,
+     "ci": [
+      0.9533333333333334,
+      1.0
+     ],
+     "accuracy": 0.98,
+     "brier": 0.019650666666666667,
+     "ece": 0.015733333333333377,
+     "acc_at_80": 0.9916666666666667,
+     "acc_at_50": 1.0,
+     "server_ms_median": 902.0,
+     "wall_ms_median": 1218.5,
+     "in_tok": 33628,
+     "out_tok": 3927,
+     "cost_per_1k_items": 0.07625333333333334
+    }
+   }
+  },
+  "emotion": {
+   "title": "Emotion in a tweet (dair-ai/emotion)",
+   "category": "classification",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "dair-ai/emotion split=test, 200 sampled seed 7, 33 per emotion then topped up to 200 at random from the remaining rows",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.505,
+     "ci": [
+      0.43,
+      0.58
+     ],
+     "ece": 0.35645000000000004,
+     "acc_at_80": 0.5375,
+     "acc_at_50": 0.62,
+     "server_ms_median": 103.0,
+     "wall_ms_median": 970.5,
+     "in_tok": 103555,
+     "out_tok": 12271,
+     "cost_per_1k_items": 0.021746550000000003
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.495,
+     "ci": [
+      0.43,
+      0.575
+     ],
+     "ece": 0.38565,
+     "acc_at_80": 0.51875,
+     "acc_at_50": 0.6,
+     "server_ms_median": 775.0,
+     "wall_ms_median": 1073.5,
+     "in_tok": 62676,
+     "out_tok": 3868,
+     "cost_per_1k_items": 0.08588399999999999
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.505,
+     "ci": [
+      0.43,
+      0.58
+     ],
+     "ece": 0.38475000000000004,
+     "acc_at_80": 0.50625,
+     "acc_at_50": 0.6,
+     "server_ms_median": 755.5,
+     "wall_ms_median": 1067.5,
+     "in_tok": 62676,
+     "out_tok": 3895,
+     "cost_per_1k_items": 0.08604600000000001
+    }
+   }
+  },
+  "essay_or_readability": {
+   "title": "Response helpfulness rating (HelpSteer2)",
+   "category": "scoring",
+   "primitive": "score",
+   "metric": "spearman",
+   "source": "nvidia/HelpSteer2 validation, 200 sampled seed 7 spread as evenly as the label counts allow over helpfulness 0-4; gold is the dataset's human helpfulness rating; prompt+response pairs longer than 40k characters skipped",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.49019306299080834,
+     "ci": [
+      0.3782300649116781,
+      0.5967623935926347
+     ],
+     "server_ms_median": 118.0,
+     "wall_ms_median": 990.5,
+     "in_tok": 212816,
+     "out_tok": 3400,
+     "cost_per_1k_items": 0.04469136
+    },
+    "luna": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.48125112787118696,
+     "ci": [
+      0.36106624798018633,
+      0.5912626190494666
+     ],
+     "server_ms_median": 779.5,
+     "wall_ms_median": 1073.0,
+     "in_tok": 177034,
+     "out_tok": 2604,
+     "cost_per_1k_items": 0.19265800000000005
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.4857466080016251,
+     "ci": [
+      0.3562342114445774,
+      0.599780416489142
+     ],
+     "server_ms_median": 1083.0,
+     "wall_ms_median": 1441.0,
+     "in_tok": 177034,
+     "out_tok": 12891,
+     "cost_per_1k_items": 0.25438
+    }
+   }
+  },
+  "fresh_math": {
+   "title": "Fresh templated math word problems (cannot be memorised)",
+   "category": "known_weakness",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "synthetic, code-generated problems and answers, seed 11",
+   "n_items": 120,
+   "scores": {
+    "jev": {
+     "n": 120,
+     "metric": "accuracy",
+     "value": 0.75,
+     "ci": [
+      0.675,
+      0.825
+     ],
+     "ece": 0.06375000000000001,
+     "acc_at_80": 0.8229166666666666,
+     "acc_at_50": 0.95,
+     "server_ms_median": 109.5,
+     "wall_ms_median": 974.5,
+     "in_tok": 46911,
+     "out_tok": 5400,
+     "cost_per_1k_items": 0.01641885
+    },
+    "luna": {
+     "n": 120,
+     "metric": "accuracy",
+     "value": 0.16666666666666666,
+     "ci": [
+      0.1,
+      0.23333333333333334
+     ],
+     "ece": 0.8285833333333333,
+     "acc_at_80": 0.15625,
+     "acc_at_50": 0.21666666666666667,
+     "server_ms_median": 710.0,
+     "wall_ms_median": 994.5,
+     "in_tok": 24392,
+     "out_tok": 2162,
+     "cost_per_1k_items": 0.06227333333333334
+    },
+    "luna-low": {
+     "n": 120,
+     "metric": "accuracy",
+     "value": 0.8,
+     "ci": [
+      0.7333333333333333,
+      0.875
+     ],
+     "ece": 0.19691666666666663,
+     "acc_at_80": 0.9166666666666666,
+     "acc_at_50": 0.9333333333333333,
+     "server_ms_median": 891.5,
+     "wall_ms_median": 1210.5,
+     "in_tok": 24392,
+     "out_tok": 4857,
+     "cost_per_1k_items": 0.08922333333333334
+    }
+   }
+  },
+  "gsm8k_choice": {
+   "title": "Grade-school math as multiple choice (GSM8K)",
+   "category": "known_weakness",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "openai/gsm8k main test split, 200 sampled seed 7. Gold is the number after '####' in the dataset's answer field. The three distractors are code-generated with seed 7 (gold +/- 1-10%, an adjacent-digit swap, and double-or-halve, topped up with small integer offsets when a candidate collides); all four options are distinct and share the gold's integer/decimal format. Options shuffled seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.725,
+     "ci": [
+      0.665,
+      0.785
+     ],
+     "ece": 0.08300000000000002,
+     "acc_at_80": 0.8125,
+     "acc_at_50": 0.95,
+     "server_ms_median": 96.0,
+     "wall_ms_median": 967.5,
+     "in_tok": 90205,
+     "out_tok": 9000,
+     "cost_per_1k_items": 0.018943050000000003
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.25,
+     "ci": [
+      0.195,
+      0.305
+     ],
+     "ece": 0.7408,
+     "acc_at_80": 0.26875,
+     "acc_at_50": 0.2,
+     "server_ms_median": 697.5,
+     "wall_ms_median": 989.5,
+     "in_tok": 52663,
+     "out_tok": 3760,
+     "cost_per_1k_items": 0.075223
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.72,
+     "ci": [
+      0.66,
+      0.78
+     ],
+     "ece": 0.27095,
+     "acc_at_80": 0.75,
+     "acc_at_50": 0.9,
+     "server_ms_median": 979.5,
+     "wall_ms_median": 1283.0,
+     "in_tok": 52663,
+     "out_tok": 9312,
+     "cost_per_1k_items": 0.108535
+    }
+   }
+  },
+  "hellaswag": {
+   "title": "Most plausible continuation (HellaSwag)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "Rowan/hellaswag validation split, 200 sampled seed 7 from 1,200 rows drawn as 12 random 100-row windows (the datasets-server rate limit makes a scattered row-by-row sample of the 10,042-row split impractical); continuations shuffled and re-keyed A..D with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.95,
+     "ci": [
+      0.915,
+      0.98
+     ],
+     "ece": 0.032450000000000034,
+     "acc_at_80": 0.99375,
+     "acc_at_50": 1.0,
+     "server_ms_median": 100.0,
+     "wall_ms_median": 975.0,
+     "in_tok": 118066,
+     "out_tok": 9000,
+     "cost_per_1k_items": 0.02479386
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.795,
+     "ci": [
+      0.74,
+      0.855
+     ],
+     "ece": 0.191,
+     "acc_at_80": 0.8375,
+     "acc_at_50": 0.89,
+     "server_ms_median": 674.0,
+     "wall_ms_median": 1001.5,
+     "in_tok": 78491,
+     "out_tok": 3800,
+     "cost_per_1k_items": 0.101291
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.82,
+     "ci": [
+      0.765,
+      0.875
+     ],
+     "ece": 0.1391,
+     "acc_at_80": 0.8625,
+     "acc_at_50": 0.9,
+     "server_ms_median": 777.5,
+     "wall_ms_median": 1089.0,
+     "in_tok": 78491,
+     "out_tok": 7897,
+     "cost_per_1k_items": 0.12587299999999998
+    }
+   }
+  },
+  "injection_sst2_attacked": {
+   "title": "Sentiment under prompt injection - attacked",
+   "category": "robustness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "nyu-mll/glue sst2 validation, first 800 rows, 150 sampled seed 7, balanced 75 positive / 75 negative; the SAME 150 sentences as injection_sst2_clean, each with one of 5 rotating injected instructions appended that pushes toward the wrong label. Gold is the dataset's true sentiment",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9466666666666667,
+     "ci": [
+      0.9066666666666666,
+      0.98
+     ],
+     "accuracy": 0.9466666666666667,
+     "brier": 0.05039933333333334,
+     "ece": 0.08180000000000001,
+     "acc_at_80": 0.9833333333333333,
+     "acc_at_50": 0.9866666666666667,
+     "server_ms_median": 108.0,
+     "wall_ms_median": 985.5,
+     "in_tok": 63102,
+     "out_tok": 3000,
+     "cost_per_1k_items": 0.01766856
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9266666666666666,
+     "ci": [
+      0.8733333333333333,
+      0.9666666666666667
+     ],
+     "accuracy": 0.9266666666666666,
+     "brier": 0.05675066666666667,
+     "ece": 0.041466666666666596,
+     "acc_at_80": 0.975,
+     "acc_at_50": 0.9733333333333334,
+     "server_ms_median": 639.0,
+     "wall_ms_median": 941.5,
+     "in_tok": 36816,
+     "out_tok": 2360,
+     "cost_per_1k_items": 0.06796800000000001
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9333333333333333,
+     "ci": [
+      0.8933333333333333,
+      0.9733333333333334
+     ],
+     "accuracy": 0.9333333333333333,
+     "brier": 0.05852266666666667,
+     "ece": 0.04959999999999997,
+     "acc_at_80": 0.9666666666666667,
+     "acc_at_50": 0.9733333333333334,
+     "server_ms_median": 717.0,
+     "wall_ms_median": 1002.5,
+     "in_tok": 36816,
+     "out_tok": 3602,
+     "cost_per_1k_items": 0.077904
+    }
+   }
+  },
+  "injection_sst2_clean": {
+   "title": "Sentiment under prompt injection - clean",
+   "category": "robustness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "nyu-mll/glue sst2 validation, first 800 rows, 150 sampled seed 7, balanced 75 positive / 75 negative; review text unmodified",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.96,
+     "ci": [
+      0.9266666666666666,
+      0.9866666666666667
+     ],
+     "accuracy": 0.96,
+     "brier": 0.035237333333333336,
+     "ece": 0.08133333333333334,
+     "acc_at_80": 0.9916666666666667,
+     "acc_at_50": 1.0,
+     "server_ms_median": 100.0,
+     "wall_ms_median": 969.0,
+     "in_tok": 61122,
+     "out_tok": 3000,
+     "cost_per_1k_items": 0.01711416
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9133333333333333,
+     "ci": [
+      0.86,
+      0.9533333333333334
+     ],
+     "accuracy": 0.9133333333333333,
+     "brier": 0.07194533333333333,
+     "ece": 0.06533333333333327,
+     "acc_at_80": 0.9416666666666667,
+     "acc_at_50": 0.9466666666666667,
+     "server_ms_median": 634.0,
+     "wall_ms_median": 935.0,
+     "in_tok": 34866,
+     "out_tok": 2368,
+     "cost_per_1k_items": 0.065432
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9133333333333333,
+     "ci": [
+      0.8666666666666667,
+      0.9533333333333334
+     ],
+     "accuracy": 0.9133333333333333,
+     "brier": 0.06294133333333334,
+     "ece": 0.05840000000000002,
+     "acc_at_80": 0.9583333333333334,
+     "acc_at_50": 0.96,
+     "server_ms_median": 693.5,
+     "wall_ms_median": 979.0,
+     "in_tok": 34866,
+     "out_tok": 2598,
+     "cost_per_1k_items": 0.067272
+    }
+   }
+  },
+  "lang_id": {
+   "title": "Language identification (20 languages)",
+   "category": "classification",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "papluca/language-identification split test; 30 random 100-row blocks (seed 7), 200 sampled seed 7, balanced 10 per language over all 20 languages",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.99,
+     "ci": [
+      0.975,
+      1.0
+     ],
+     "ece": 0.004199999999999975,
+     "acc_at_80": 0.99375,
+     "acc_at_50": 0.99,
+     "server_ms_median": 95.5,
+     "wall_ms_median": 963.0,
+     "in_tok": 147310,
+     "out_tok": 31400,
+     "cost_per_1k_items": 0.0309351
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "ece": 0.0049000000000000155,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 696.0,
+     "wall_ms_median": 978.5,
+     "in_tok": 87224,
+     "out_tok": 3594,
+     "cost_per_1k_items": 0.108788
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "ece": 0.005950000000000011,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 650.0,
+     "wall_ms_median": 945.0,
+     "in_tok": 87224,
+     "out_tok": 3638,
+     "cost_per_1k_items": 0.10905199999999998
+    }
+   }
+  },
+  "logiqa": {
+   "title": "Logical reasoning over a passage (LogiQA)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "lucasmccabe/logiqa test split (English LogiQA, from the Chinese civil-service exam), 200 sampled seed 7; answer options shuffled and re-keyed A..D with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.765,
+     "ci": [
+      0.705,
+      0.825
+     ],
+     "ece": 0.10380000000000006,
+     "acc_at_80": 0.8375,
+     "acc_at_50": 0.88,
+     "server_ms_median": 105.0,
+     "wall_ms_median": 972.5,
+     "in_tok": 114742,
+     "out_tok": 9000,
+     "cost_per_1k_items": 0.024095820000000004
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.395,
+     "ci": [
+      0.33,
+      0.46
+     ],
+     "ece": 0.5868000000000001,
+     "acc_at_80": 0.40625,
+     "acc_at_50": 0.45,
+     "server_ms_median": 704.5,
+     "wall_ms_median": 988.5,
+     "in_tok": 75705,
+     "out_tok": 3800,
+     "cost_per_1k_items": 0.098505
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.59,
+     "ci": [
+      0.53,
+      0.665
+     ],
+     "ece": 0.34035,
+     "acc_at_80": 0.6125,
+     "acc_at_50": 0.67,
+     "server_ms_median": 1452.0,
+     "wall_ms_median": 1728.0,
+     "in_tok": 75705,
+     "out_tok": 37225,
+     "cost_per_1k_items": 0.299055
+    }
+   }
+  },
+  "mmlu": {
+   "title": "Academic knowledge (MMLU)",
+   "category": "knowledge",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "cais/mmlu test split, 25 per-subject configs (anatomy, astronomy, business_ethics, clinical_knowledge, college_computer_science, econometrics, electrical_engineering, formal_logic, global_facts, high_school_geography, high_school_psychology, international_law, machine_learning, marketing, medical_genetics, moral_disputes, nutrition, philosophy, prehistory, professional_accounting, public_relations, security_studies, sociology, us_foreign_policy, world_religions), 8 questions sampled per subject with seed 7, 200 total; answer options shuffled with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.935,
+     "ci": [
+      0.9,
+      0.965
+     ],
+     "ece": 0.03300000000000006,
+     "acc_at_80": 0.96875,
+     "acc_at_50": 0.99,
+     "server_ms_median": 100.5,
+     "wall_ms_median": 965.5,
+     "in_tok": 89161,
+     "out_tok": 9000,
+     "cost_per_1k_items": 0.01872381
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.77,
+     "ci": [
+      0.715,
+      0.825
+     ],
+     "ece": 0.20475000000000004,
+     "acc_at_80": 0.775,
+     "acc_at_50": 0.85,
+     "server_ms_median": 675.0,
+     "wall_ms_median": 970.0,
+     "in_tok": 50928,
+     "out_tok": 3792,
+     "cost_per_1k_items": 0.07368
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.87,
+     "ci": [
+      0.82,
+      0.915
+     ],
+     "ece": 0.11039999999999991,
+     "acc_at_80": 0.89375,
+     "acc_at_50": 0.9,
+     "server_ms_median": 864.0,
+     "wall_ms_median": 1189.0,
+     "in_tok": 50928,
+     "out_tok": 8515,
+     "cost_per_1k_items": 0.10201799999999998
+    }
+   }
+  },
+  "mnli": {
+   "title": "Natural language inference (MultiNLI matched)",
+   "category": "understanding",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "nyu-mll/glue mnli validation_matched, 200 sampled seed 7, balanced 67 per class then trimmed to 200",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.84,
+     "ci": [
+      0.79,
+      0.895
+     ],
+     "ece": 0.06555,
+     "acc_at_80": 0.9125,
+     "acc_at_50": 0.95,
+     "server_ms_median": 97.0,
+     "wall_ms_median": 971.0,
+     "in_tok": 93217,
+     "out_tok": 8616,
+     "cost_per_1k_items": 0.01957557
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.8,
+     "ci": [
+      0.745,
+      0.86
+     ],
+     "ece": 0.1843999999999999,
+     "acc_at_80": 0.83125,
+     "acc_at_50": 0.86,
+     "server_ms_median": 709.0,
+     "wall_ms_median": 995.5,
+     "in_tok": 55152,
+     "out_tok": 4014,
+     "cost_per_1k_items": 0.07923600000000001
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.79,
+     "ci": [
+      0.73,
+      0.845
+     ],
+     "ece": 0.19619999999999996,
+     "acc_at_80": 0.84375,
+     "acc_at_50": 0.86,
+     "server_ms_median": 978.5,
+     "wall_ms_median": 1268.0,
+     "in_tok": 55152,
+     "out_tok": 6673,
+     "cost_per_1k_items": 0.09519
+    }
+   }
+  },
+  "msmarco_rerank": {
+   "title": "Passage reranking (MS MARCO v1.1)",
+   "category": "ranking",
+   "primitive": "score",
+   "metric": "mrr",
+   "source": "microsoft/ms_marco v1.1 validation, 100 queries sampled seed 7 from the first 800 rows, each with 8-12 retrieved passages and exactly one is_selected=1; gold relevance is the dataset's is_selected flag",
+   "n_items": 100,
+   "scores": {
+    "jev": {
+     "n": 100,
+     "metric": "mrr",
+     "value": 0.4986507936507936,
+     "ci": [
+      0.43775,
+      0.5668492063492063
+     ],
+     "server_ms_median": 118.0,
+     "wall_ms_median": 1221.5,
+     "in_tok": 291944,
+     "out_tok": 12860,
+     "cost_per_1k_items": 0.12261648000000001
+    },
+    "luna": {
+     "n": 100,
+     "metric": "mrr",
+     "value": 0.4176785714285714,
+     "ci": [
+      0.3628214285714286,
+      0.4718333333333333
+     ],
+     "server_ms_median": 1157.5,
+     "wall_ms_median": 1445.0,
+     "in_tok": 295789,
+     "out_tok": 6930,
+     "cost_per_1k_items": 0.6747380000000001
+    },
+    "luna-low": {
+     "n": 100,
+     "metric": "mrr",
+     "value": 0.4356785714285714,
+     "ci": [
+      0.38213095238095235,
+      0.49603968253968256
+     ],
+     "server_ms_median": 2415.0,
+     "wall_ms_median": 2748.0,
+     "in_tok": 295789,
+     "out_tok": 18194,
+     "cost_per_1k_items": 0.8099060000000001
+    }
+   }
+  },
+  "needle_12k": {
+   "title": "Needle in a haystack (~12k tokens)",
+   "category": "long_context",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic; filler paragraphs are deduplicated rajpurkar/squad plain_text validation contexts, needle sentence and gold label generated by code (seed 7). Same 60 needles, questions and depths across needle_1k/4k/12k/24k; haystack sized to ~12000 tokens at 4 chars/token",
+   "n_items": 60,
+   "scores": {
+    "jev": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0006400000000000002,
+     "ece": 0.02300000000000002,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 154.0,
+     "wall_ms_median": 1644.5,
+     "in_tok": 677673,
+     "out_tok": 1200,
+     "cost_per_1k_items": 0.47437110000000005
+    },
+    "luna": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 1.6666666666666667e-06,
+     "ece": 0.0001666666666666483,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 743.5,
+     "wall_ms_median": 1043.5,
+     "in_tok": 631135,
+     "out_tok": 842,
+     "cost_per_1k_items": 2.1206233333333335
+    },
+    "luna-low": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0,
+     "ece": 0.0,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 740.5,
+     "wall_ms_median": 1059.0,
+     "in_tok": 631135,
+     "out_tok": 1224,
+     "cost_per_1k_items": 2.1282633333333334
+    }
+   }
+  },
+  "needle_1k": {
+   "title": "Needle in a haystack (~1k tokens)",
+   "category": "long_context",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic; filler paragraphs are deduplicated rajpurkar/squad plain_text validation contexts, needle sentence and gold label generated by code (seed 7). Same 60 needles, questions and depths across needle_1k/4k/12k/24k; haystack sized to ~1000 tokens at 4 chars/token",
+   "n_items": 60,
+   "scores": {
+    "jev": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0003566666666666668,
+     "ece": 0.01733333333333331,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 104.0,
+     "wall_ms_median": 981.0,
+     "in_tok": 87115,
+     "out_tok": 1200,
+     "cost_per_1k_items": 0.06098050000000001
+    },
+    "luna": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 3.3333333333333333e-06,
+     "ece": 0.0003333333333332966,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 724.0,
+     "wall_ms_median": 1013.0,
+     "in_tok": 72577,
+     "out_tok": 844,
+     "cost_per_1k_items": 0.2588033333333334
+    },
+    "luna-low": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 1.6666666666666667e-06,
+     "ece": 0.0001666666666666483,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 743.0,
+     "wall_ms_median": 1079.0,
+     "in_tok": 72577,
+     "out_tok": 1121,
+     "cost_per_1k_items": 0.2643433333333334
+    }
+   }
+  },
+  "needle_24k": {
+   "title": "Needle in a haystack (~24k tokens)",
+   "category": "long_context",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic; filler paragraphs are deduplicated rajpurkar/squad plain_text validation contexts, needle sentence and gold label generated by code (seed 7). Same 60 needles, questions and depths across needle_1k/4k/12k/24k; haystack sized to ~24000 tokens at 4 chars/token (capped at ~88k chars to stay under validate.py's 90k per-item limit, so the effective size is ~22k tokens)",
+   "n_items": 60,
+   "scores": {
+    "jev": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.000786666666666667,
+     "ece": 0.025000000000000022,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 196.5,
+     "wall_ms_median": 1755.5,
+     "in_tok": 1203561,
+     "out_tok": 1200,
+     "cost_per_1k_items": 0.8424927000000002
+    },
+    "luna": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 1.6666666666666667e-06,
+     "ece": 0.0001666666666666483,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 784.5,
+     "wall_ms_median": 1122.5,
+     "in_tok": 1128838,
+     "out_tok": 842,
+     "cost_per_1k_items": 3.7796333333333334
+    },
+    "luna-low": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 6.666666666666667e-06,
+     "ece": 0.0006666666666667043,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 810.0,
+     "wall_ms_median": 1152.5,
+     "in_tok": 1128838,
+     "out_tok": 1003,
+     "cost_per_1k_items": 3.7828533333333336
+    }
+   }
+  },
+  "needle_4k": {
+   "title": "Needle in a haystack (~4k tokens)",
+   "category": "long_context",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic; filler paragraphs are deduplicated rajpurkar/squad plain_text validation contexts, needle sentence and gold label generated by code (seed 7). Same 60 needles, questions and depths across needle_1k/4k/12k/24k; haystack sized to ~4000 tokens at 4 chars/token",
+   "n_items": 60,
+   "scores": {
+    "jev": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0003583333333333335,
+     "ece": 0.01750000000000007,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 144.0,
+     "wall_ms_median": 1329.0,
+     "in_tok": 248724,
+     "out_tok": 1200,
+     "cost_per_1k_items": 0.1741068
+    },
+    "luna": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 3.3333333333333333e-06,
+     "ece": 0.0003333333333332966,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 668.5,
+     "wall_ms_median": 974.0,
+     "in_tok": 225301,
+     "out_tok": 844,
+     "cost_per_1k_items": 0.7678833333333335
+    },
+    "luna-low": {
+     "n": 60,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 1.6666666666666667e-06,
+     "ece": 0.0001666666666666483,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 751.5,
+     "wall_ms_median": 1057.5,
+     "in_tok": 225301,
+     "out_tok": 1169,
+     "cost_per_1k_items": 0.7743833333333334
+    }
+   }
+  },
+  "negation_pairs": {
+   "title": "Yes/no questions and their explicit negations (BoolQ)",
+   "category": "robustness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "google/boolq validation, first 1200 rows with passages under 3000 chars, 100 sampled seed 7 balanced 50 yes / 50 no; 200 items = each question asked directly (a) and as an explicit negation (b) with flipped gold. Pair id in meta",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.805,
+     "ci": [
+      0.745,
+      0.86
+     ],
+     "accuracy": 0.805,
+     "brier": 0.137816,
+     "ece": 0.0348,
+     "acc_at_80": 0.86875,
+     "acc_at_50": 0.91,
+     "mean_abs_dev_from_1": 0.3206,
+     "server_ms_median": 102.5,
+     "wall_ms_median": 977.0,
+     "in_tok": 101394,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.021292740000000004
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.705,
+     "ci": [
+      0.645,
+      0.765
+     ],
+     "accuracy": 0.705,
+     "brier": 0.274428,
+     "ece": 0.2676,
+     "acc_at_80": 0.6875,
+     "acc_at_50": 0.68,
+     "mean_abs_dev_from_1": 0.4336,
+     "server_ms_median": 670.5,
+     "wall_ms_median": 957.5,
+     "in_tok": 64756,
+     "out_tok": 3034,
+     "cost_per_1k_items": 0.08295999999999999
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.78,
+     "ci": [
+      0.72,
+      0.84
+     ],
+     "accuracy": 0.78,
+     "brier": 0.199478,
+     "ece": 0.18719999999999992,
+     "acc_at_80": 0.79375,
+     "acc_at_50": 0.81,
+     "mean_abs_dev_from_1": 0.3062,
+     "server_ms_median": 752.0,
+     "wall_ms_median": 1045.5,
+     "in_tok": 64756,
+     "out_tok": 6531,
+     "cost_per_1k_items": 0.10394200000000002
+    }
+   }
+  },
+  "ner_typing": {
+   "title": "Entity typing (CoNLL-2003)",
+   "category": "extraction",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "tner/conll2003 test, 200 entity mentions sampled seed 7 (50 each of PER/ORG/LOC/MISC) from sentences of 5-60 tokens where the mention string occurs exactly once; all-caps headline sentences skipped; gold = the dataset's entity type",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.895,
+     "ci": [
+      0.85,
+      0.94
+     ],
+     "ece": 0.06389999999999997,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.95,
+     "server_ms_median": 105.0,
+     "wall_ms_median": 977.0,
+     "in_tok": 123119,
+     "out_tok": 9253,
+     "cost_per_1k_items": 0.02585499
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.865,
+     "ci": [
+      0.82,
+      0.91
+     ],
+     "ece": 0.1266,
+     "acc_at_80": 0.93125,
+     "acc_at_50": 0.94,
+     "server_ms_median": 746.5,
+     "wall_ms_median": 1046.5,
+     "in_tok": 83653,
+     "out_tok": 3838,
+     "cost_per_1k_items": 0.106681
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.885,
+     "ci": [
+      0.84,
+      0.93
+     ],
+     "ece": 0.10554999999999998,
+     "acc_at_80": 0.9375,
+     "acc_at_50": 0.96,
+     "server_ms_median": 698.0,
+     "wall_ms_median": 986.0,
+     "in_tok": 83653,
+     "out_tok": 3858,
+     "cost_per_1k_items": 0.106801
+    }
+   }
+  },
+  "nfcorpus_rerank": {
+   "title": "Biomedical document reranking (BEIR NFCorpus)",
+   "category": "ranking",
+   "primitive": "score",
+   "metric": "ndcg10",
+   "source": "BeIR/nfcorpus corpus+queries with BeIR/nfcorpus-qrels test, 60 test queries sampled seed 7 from those with at least one relevant document; candidates = up to 5 relevant docs (highest graded first) + lexical hard negatives (most query token overlap among a random 2000-doc pool, excluding all judged docs) up to 15 candidates, shuffled; docs = title + abstract truncated to 1200 chars; gold = graded qrels relevance, 0 for unjudged negatives",
+   "n_items": 60,
+   "scores": {
+    "jev": {
+     "n": 60,
+     "metric": "ndcg10",
+     "value": 0.7337334414127384,
+     "ci": [
+      0.6741484983196037,
+      0.8022344582887094
+     ],
+     "server_ms_median": 148.5,
+     "wall_ms_median": 1414.5,
+     "in_tok": 447719,
+     "out_tok": 13140,
+     "cost_per_1k_items": 0.3134033
+    },
+    "luna": {
+     "n": 60,
+     "metric": "ndcg10",
+     "value": 0.6340938047438746,
+     "ci": [
+      0.570963696992607,
+      0.6962146776531345
+     ],
+     "server_ms_median": 1375.5,
+     "wall_ms_median": 1687.0,
+     "in_tok": 445363,
+     "out_tok": 6720,
+     "cost_per_1k_items": 1.6189433333333334
+    },
+    "luna-low": {
+     "n": 60,
+     "metric": "ndcg10",
+     "value": 0.6287896231017412,
+     "ci": [
+      0.5703678225087995,
+      0.6834507166435474
+     ],
+     "server_ms_median": 3480.0,
+     "wall_ms_median": 3830.0,
+     "in_tok": 445363,
+     "out_tok": 18202,
+     "cost_per_1k_items": 1.8485833333333335
+    }
+   }
+  },
+  "number_compare": {
+   "title": "Numeric comparison of similar magnitudes",
+   "category": "known_weakness",
+   "primitive": "noul",
+   "metric": "accuracy",
+   "source": "synthetic, generated by code with seed 7; 25 hand-picked tricky pairs (9.11 vs 9.9, 1,000,000 vs 999,999, ...) plus generated near-magnitude pairs; gold computed in code, balanced true/false",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0012740000000000004,
+     "ece": 0.025000000000000046,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 102.5,
+     "wall_ms_median": 965.0,
+     "in_tok": 58922,
+     "out_tok": 3000,
+     "cost_per_1k_items": 0.01649816
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0,
+     "ece": 0.0,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 657.5,
+     "wall_ms_median": 952.5,
+     "in_tok": 32121,
+     "out_tok": 2100,
+     "cost_per_1k_items": 0.05962800000000001
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "accuracy": 1.0,
+     "brier": 0.0,
+     "ece": 0.0,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 675.0,
+     "wall_ms_median": 959.5,
+     "in_tok": 32121,
+     "out_tok": 2182,
+     "cost_per_1k_items": 0.060284
+    }
+   }
+  },
+  "paraphrase_consistency": {
+   "title": "Topic classification under reworded instructions (AG News)",
+   "category": "robustness",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "fancyzhx/ag_news test, first 800 rows, 50 sampled seed 7 balanced across the 4 classes (13/13/12/12); 200 items = each article asked under 4 differently worded but equivalent instruction/criteria variants. meta carries base id and variant",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.845,
+     "ci": [
+      0.795,
+      0.895
+     ],
+     "ece": 0.10020000000000001,
+     "acc_at_80": 0.91875,
+     "acc_at_50": 0.93,
+     "all_variants_agree": 0.9,
+     "server_ms_median": 100.5,
+     "wall_ms_median": 977.5,
+     "in_tok": 89608,
+     "out_tok": 9462,
+     "cost_per_1k_items": 0.01881768
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.82,
+     "ci": [
+      0.765,
+      0.875
+     ],
+     "ece": 0.16584999999999997,
+     "acc_at_80": 0.90625,
+     "acc_at_50": 0.88,
+     "all_variants_agree": 0.9,
+     "server_ms_median": 764.0,
+     "wall_ms_median": 1053.5,
+     "in_tok": 51476,
+     "out_tok": 3783,
+     "cost_per_1k_items": 0.074174
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.835,
+     "ci": [
+      0.785,
+      0.885
+     ],
+     "ece": 0.15095000000000006,
+     "acc_at_80": 0.9,
+     "acc_at_50": 0.9,
+     "all_variants_agree": 0.92,
+     "server_ms_median": 735.5,
+     "wall_ms_median": 1017.0,
+     "in_tok": 51476,
+     "out_tok": 3893,
+     "cost_per_1k_items": 0.074834
+    }
+   }
+  },
+  "paws": {
+   "title": "Adversarial paraphrase detection (PAWS)",
+   "category": "understanding",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "google-research-datasets/paws labeled_final test, 200 sampled seed 7, balanced 100 paraphrase / 100 not",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.91585,
+     "ci": [
+      0.879020062506301,
+      0.9472155448717948
+     ],
+     "accuracy": 0.8,
+     "brier": 0.142987,
+     "ece": 0.09420000000000003,
+     "acc_at_80": 0.85625,
+     "acc_at_50": 0.96,
+     "server_ms_median": 98.5,
+     "wall_ms_median": 972.0,
+     "in_tok": 94893,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.019927530000000002
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.8796,
+     "ci": [
+      0.8322460859092734,
+      0.9239633655394525
+     ],
+     "accuracy": 0.815,
+     "brier": 0.17882599999999998,
+     "ece": 0.175,
+     "acc_at_80": 0.85,
+     "acc_at_50": 0.92,
+     "server_ms_median": 752.5,
+     "wall_ms_median": 1049.0,
+     "in_tok": 59060,
+     "out_tok": 3066,
+     "cost_per_1k_items": 0.077456
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.87515,
+     "ci": [
+      0.8267826782678268,
+      0.9192543462968545
+     ],
+     "accuracy": 0.795,
+     "brier": 0.191274,
+     "ece": 0.19009999999999994,
+     "acc_at_80": 0.85625,
+     "acc_at_50": 0.87,
+     "server_ms_median": 1000.5,
+     "wall_ms_median": 1303.5,
+     "in_tok": 59060,
+     "out_tok": 10695,
+     "cost_per_1k_items": 0.12322999999999999
+    }
+   }
+  },
+  "review_stars": {
+   "title": "Star rating from review text (Yelp Review Full)",
+   "category": "scoring",
+   "primitive": "score",
+   "metric": "spearman",
+   "source": "Yelp/yelp_review_full test, 200 sampled seed 7 from the first 2000 rows, 40 per star; gold is the dataset label (stars - 1); reviews truncated to 1500 characters",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9266792987798046,
+     "ci": [
+      0.906024232745315,
+      0.9425535392610701
+     ],
+     "server_ms_median": 115.0,
+     "wall_ms_median": 975.0,
+     "in_tok": 136810,
+     "out_tok": 3400,
+     "cost_per_1k_items": 0.0287301
+    },
+    "luna": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9146907788825758,
+     "ci": [
+      0.8896257076542504,
+      0.9355176746953757
+     ],
+     "server_ms_median": 782.0,
+     "wall_ms_median": 1105.0,
+     "in_tok": 103214,
+     "out_tok": 2602,
+     "cost_per_1k_items": 0.11882600000000001
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9102620207832791,
+     "ci": [
+      0.8814322407046851,
+      0.9303368474831917
+     ],
+     "server_ms_median": 737.0,
+     "wall_ms_median": 1065.5,
+     "in_tok": 103214,
+     "out_tok": 3281,
+     "cost_per_1k_items": 0.12290000000000004
+    }
+   }
+  },
+  "sms_spam": {
+   "title": "SMS spam detection",
+   "category": "classification",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "ucirvine/sms_spam plain_text train (the dataset's only split), 200 sampled seed 7, balanced 100 spam / 100 ham",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9996,
+     "ci": [
+      0.9984962406015038,
+      1.0
+     ],
+     "accuracy": 0.995,
+     "brier": 0.012065000000000001,
+     "ece": 0.051300000000000026,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 96.5,
+     "wall_ms_median": 960.0,
+     "in_tok": 86681,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.018203010000000002
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.9895,
+     "ci": [
+      0.9769670814933762,
+      0.9975990396158463
+     ],
+     "accuracy": 0.975,
+     "brier": 0.024602525,
+     "ece": 0.017425000000000024,
+     "acc_at_80": 0.96875,
+     "acc_at_50": 0.97,
+     "server_ms_median": 771.0,
+     "wall_ms_median": 1079.5,
+     "in_tok": 50361,
+     "out_tok": 3118,
+     "cost_per_1k_items": 0.069069
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.99145,
+     "ci": [
+      0.9817877435064936,
+      0.9992496998799519
+     ],
+     "accuracy": 0.97,
+     "brier": 0.02869906,
+     "ece": 0.022239999999999965,
+     "acc_at_80": 0.98125,
+     "acc_at_50": 0.98,
+     "server_ms_median": 766.5,
+     "wall_ms_median": 1056.0,
+     "in_tok": 50361,
+     "out_tok": 4087,
+     "cost_per_1k_items": 0.07488299999999999
+    }
+   }
+  },
+  "squad_sentence": {
+   "title": "Answer-sentence selection (SQuAD v1.1)",
+   "category": "extraction",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "rajpurkar/squad plain_text validation, 200 sampled seed 7 from the first 3000 rows; contexts split into sentences by code, kept when they give 4-10 sentences and the gold answer span falls inside exactly one; one randomly chosen question per context; gold = the sentence holding the dataset's answer span",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.945,
+     "ci": [
+      0.91,
+      0.975
+     ],
+     "ece": 0.03079999999999996,
+     "acc_at_80": 0.98125,
+     "acc_at_50": 0.98,
+     "server_ms_median": 104.0,
+     "wall_ms_median": 964.0,
+     "in_tok": 167227,
+     "out_tok": 12256,
+     "cost_per_1k_items": 0.035117670000000004
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.945,
+     "ci": [
+      0.91,
+      0.975
+     ],
+     "ece": 0.05080000000000007,
+     "acc_at_80": 0.98125,
+     "acc_at_50": 0.99,
+     "server_ms_median": 765.0,
+     "wall_ms_median": 1049.5,
+     "in_tok": 122249,
+     "out_tok": 3854,
+     "cost_per_1k_items": 0.14537300000000003
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.95,
+     "ci": [
+      0.92,
+      0.975
+     ],
+     "ece": 0.04510000000000003,
+     "acc_at_80": 0.96875,
+     "acc_at_50": 0.99,
+     "server_ms_median": 719.5,
+     "wall_ms_median": 1036.0,
+     "in_tok": 122249,
+     "out_tok": 3912,
+     "cost_per_1k_items": 0.14572100000000002
+    }
+   }
+  },
+  "sst2": {
+   "title": "Movie review sentiment (SST-2)",
+   "category": "classification",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "nyu-mll/glue sst2 validation, 200 sampled seed 7, balanced 100 positive / 100 negative",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.98085,
+     "ci": [
+      0.9585463659147869,
+      0.9959983993597439
+     ],
+     "accuracy": 0.95,
+     "brier": 0.053725,
+     "ece": 0.06249999999999998,
+     "acc_at_80": 0.9625,
+     "acc_at_50": 0.98,
+     "server_ms_median": 91.5,
+     "wall_ms_median": 954.5,
+     "in_tok": 79575,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.01671075
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.96635,
+     "ci": [
+      0.9410365421601377,
+      0.9869053708439898
+     ],
+     "accuracy": 0.925,
+     "brier": 0.063831,
+     "ece": 0.041800000000000045,
+     "acc_at_80": 0.9625,
+     "acc_at_50": 0.96,
+     "server_ms_median": 722.5,
+     "wall_ms_median": 1027.0,
+     "in_tok": 43957,
+     "out_tok": 3128,
+     "cost_per_1k_items": 0.062725
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.97175,
+     "ci": [
+      0.9495182657567242,
+      0.9904035688349414
+     ],
+     "accuracy": 0.935,
+     "brier": 0.055515499999999995,
+     "ece": 0.038349999999999995,
+     "acc_at_80": 0.95,
+     "acc_at_50": 0.98,
+     "server_ms_median": 695.0,
+     "wall_ms_median": 997.0,
+     "in_tok": 43957,
+     "out_tok": 3359,
+     "cost_per_1k_items": 0.064111
+    }
+   }
+  },
+  "stsb": {
+   "title": "Semantic textual similarity (STS-Benchmark)",
+   "category": "scoring",
+   "primitive": "score",
+   "metric": "spearman",
+   "source": "nyu-mll/glue stsb validation, 200 sampled seed 7, spread evenly over the six 0-5 similarity buckets; gold is the dataset's averaged human similarity score",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9311284728948918,
+     "ci": [
+      0.9068839542946775,
+      0.947954474388043
+     ],
+     "server_ms_median": 100.0,
+     "wall_ms_median": 965.0,
+     "in_tok": 98451,
+     "out_tok": 3400,
+     "cost_per_1k_items": 0.020674710000000002
+    },
+    "luna": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9046288091805547,
+     "ci": [
+      0.8695676163790735,
+      0.9284225669481009
+     ],
+     "server_ms_median": 707.5,
+     "wall_ms_median": 1000.5,
+     "in_tok": 63988,
+     "out_tok": 2608,
+     "cost_per_1k_items": 0.079636
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "spearman",
+     "value": 0.9220141858891492,
+     "ci": [
+      0.8957443253376978,
+      0.9398385930880054
+     ],
+     "server_ms_median": 711.5,
+     "wall_ms_median": 1026.5,
+     "in_tok": 63988,
+     "out_tok": 5154,
+     "cost_per_1k_items": 0.094912
+    }
+   }
+  },
+  "toxicity": {
+   "title": "Toxic comment detection (Civil Comments)",
+   "category": "classification",
+   "primitive": "noul",
+   "metric": "auroc",
+   "source": "google/civil_comments test, crowd toxicity >= 0.5 as toxic vs < 0.1 as not toxic (0.1-0.5 dropped as ambiguous), 20-1500 chars, 200 sampled seed 7, balanced 100/100",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.87155,
+     "ci": [
+      0.8197878090281253,
+      0.9191919191919192
+     ],
+     "accuracy": 0.76,
+     "brier": 0.1536535,
+     "ece": 0.07605000000000002,
+     "acc_at_80": 0.825,
+     "acc_at_50": 0.94,
+     "server_ms_median": 110.0,
+     "wall_ms_median": 980.5,
+     "in_tok": 91950,
+     "out_tok": 4000,
+     "cost_per_1k_items": 0.019309500000000004
+    },
+    "luna": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.842,
+     "ci": [
+      0.7831632653061225,
+      0.8933073229291717
+     ],
+     "accuracy": 0.78,
+     "brier": 0.195392015,
+     "ece": 0.17918499999999998,
+     "acc_at_80": 0.825,
+     "acc_at_50": 0.89,
+     "server_ms_median": 617.0,
+     "wall_ms_median": 909.5,
+     "in_tok": 55974,
+     "out_tok": 3188,
+     "cost_per_1k_items": 0.07510200000000002
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "auroc",
+     "value": 0.869,
+     "ci": [
+      0.8194374432906543,
+      0.9091140270572678
+     ],
+     "accuracy": 0.78,
+     "brier": 0.182036515,
+     "ece": 0.16613499999999998,
+     "acc_at_80": 0.85,
+     "acc_at_50": 0.92,
+     "server_ms_median": 846.5,
+     "wall_ms_median": 1156.5,
+     "in_tok": 55974,
+     "out_tok": 5645,
+     "cost_per_1k_items": 0.08984400000000002
+    }
+   }
+  },
+  "trec": {
+   "title": "Question type (TREC coarse)",
+   "category": "classification",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "SetFit/TREC-QC test (mirror of CogComp/trec, which the HF dataset viewer cannot serve), coarse labels, 200 sampled seed 7, balanced ~33 per class; classes short in the test split topped up from the train split of the same dataset: {'ABBR': 25}",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.925,
+     "ci": [
+      0.89,
+      0.96
+     ],
+     "ece": 0.052750000000000026,
+     "acc_at_80": 0.95625,
+     "acc_at_50": 0.99,
+     "server_ms_median": 100.5,
+     "wall_ms_median": 981.0,
+     "in_tok": 113742,
+     "out_tok": 12492,
+     "cost_per_1k_items": 0.023885820000000002
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.89,
+     "ci": [
+      0.845,
+      0.93
+     ],
+     "ece": 0.09904999999999997,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.93,
+     "server_ms_median": 781.0,
+     "wall_ms_median": 1063.5,
+     "in_tok": 73480,
+     "out_tok": 3871,
+     "cost_per_1k_items": 0.09670599999999999
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.88,
+     "ci": [
+      0.835,
+      0.925
+     ],
+     "ece": 0.10865000000000002,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.92,
+     "server_ms_median": 785.0,
+     "wall_ms_median": 1098.5,
+     "in_tok": 73480,
+     "out_tok": 3878,
+     "cost_per_1k_items": 0.09674799999999999
+    }
+   }
+  },
+  "truthfulqa_mc1": {
+   "title": "Truthful answers to misleading questions (TruthfulQA MC1)",
+   "category": "knowledge",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "truthfulqa/truthful_qa multiple_choice validation split, mc1_targets, 200 sampled seed 7. The correct answer is always the first choice upstream, so options are shuffled and re-keyed A..M with seed 7",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.95,
+     "ci": [
+      0.915,
+      0.98
+     ],
+     "ece": 0.044750000000000026,
+     "acc_at_80": 0.99375,
+     "acc_at_50": 1.0,
+     "server_ms_median": 100.5,
+     "wall_ms_median": 968.0,
+     "in_tok": 97060,
+     "out_tok": 10162,
+     "cost_per_1k_items": 0.0203826
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.835,
+     "ci": [
+      0.785,
+      0.89
+     ],
+     "ece": 0.15555000000000005,
+     "acc_at_80": 0.8375,
+     "acc_at_50": 0.82,
+     "server_ms_median": 737.0,
+     "wall_ms_median": 1032.0,
+     "in_tok": 57124,
+     "out_tok": 3744,
+     "cost_per_1k_items": 0.07958799999999999
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.85,
+     "ci": [
+      0.8,
+      0.895
+     ],
+     "ece": 0.12769999999999992,
+     "acc_at_80": 0.8625,
+     "acc_at_50": 0.85,
+     "server_ms_median": 789.0,
+     "wall_ms_median": 1210.0,
+     "in_tok": 57124,
+     "out_tok": 10262,
+     "cost_per_1k_items": 0.11869600000000001
+    }
+   }
+  },
+  "two_hop": {
+   "title": "Two-hop relational lookup with distractors",
+   "category": "known_weakness",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "synthetic, generated by code with seed 7; 2-hop manager/office facts plus 6-8 distractor facts (including the subject's own office city); gold computed in code",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "ece": 0.0051333333333333855,
+     "acc_at_80": 1.0,
+     "acc_at_50": 1.0,
+     "server_ms_median": 103.0,
+     "wall_ms_median": 970.0,
+     "in_tok": 81133,
+     "out_tok": 7603,
+     "cost_per_1k_items": 0.022717240000000003
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.8466666666666667,
+     "ci": [
+      0.7933333333333333,
+      0.9066666666666666
+     ],
+     "ece": 0.15300000000000002,
+     "acc_at_80": 0.8583333333333333,
+     "acc_at_50": 0.84,
+     "server_ms_median": 726.0,
+     "wall_ms_median": 1018.5,
+     "in_tok": 50216,
+     "out_tok": 2716,
+     "cost_per_1k_items": 0.08868266666666667
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.9266666666666666,
+     "ci": [
+      0.88,
+      0.9666666666666667
+     ],
+     "ece": 0.07320000000000004,
+     "acc_at_80": 0.925,
+     "acc_at_50": 0.9333333333333333,
+     "server_ms_median": 806.5,
+     "wall_ms_median": 1129.0,
+     "in_tok": 50216,
+     "out_tok": 3907,
+     "cost_per_1k_items": 0.09821066666666668
+    }
+   }
+  },
+  "value_selection": {
+   "title": "Value selection from pre-extracted spans (SQuAD v1.1)",
+   "category": "extraction",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "rajpurkar/squad plain_text validation, 155 items (all that qualify) from the first 3000 rows where the gold answer is a number or date-like span (regex), occurs exactly once in the context, and the context holds at least 3 other distinct numeric/date spans; options = up to 8 distinct spans including the gold one, each shown with 6 words of context either side; gold = the key of the dataset's answer span",
+   "n_items": 155,
+   "scores": {
+    "jev": {
+     "n": 155,
+     "metric": "accuracy",
+     "value": 0.9290322580645162,
+     "ci": [
+      0.8838709677419355,
+      0.967741935483871
+     ],
+     "ece": 0.08877419354838711,
+     "acc_at_80": 0.9354838709677419,
+     "acc_at_50": 1.0,
+     "server_ms_median": 108,
+     "wall_ms_median": 969,
+     "in_tok": 92765,
+     "out_tok": 10358,
+     "cost_per_1k_items": 0.025136322580645163
+    },
+    "luna": {
+     "n": 155,
+     "metric": "accuracy",
+     "value": 0.9161290322580645,
+     "ci": [
+      0.8709677419354839,
+      0.9548387096774194
+     ],
+     "ece": 0.07387096774193547,
+     "acc_at_80": 0.9354838709677419,
+     "acc_at_50": 0.935064935064935,
+     "server_ms_median": 725,
+     "wall_ms_median": 1022,
+     "in_tok": 59884,
+     "out_tok": 3048,
+     "cost_per_1k_items": 0.10086709677419356
+    },
+    "luna-low": {
+     "n": 155,
+     "metric": "accuracy",
+     "value": 0.9354838709677419,
+     "ci": [
+      0.896774193548387,
+      0.9741935483870968
+     ],
+     "ece": 0.05316129032258066,
+     "acc_at_80": 0.9596774193548387,
+     "acc_at_50": 0.974025974025974,
+     "server_ms_median": 724,
+     "wall_ms_median": 1042,
+     "in_tok": 59884,
+     "out_tok": 3809,
+     "cost_per_1k_items": 0.10675870967741936
+    }
+   }
+  },
+  "winogrande": {
+   "title": "Pronoun-style blank filling (WinoGrande)",
+   "category": "reasoning",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "allenai/winogrande winogrande_xl validation split, 200 sampled seed 7; the two fillers shuffled into keys A/B with seed 7 so the gold key is not the dataset's answer index",
+   "n_items": 200,
+   "scores": {
+    "jev": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.885,
+     "ci": [
+      0.84,
+      0.93
+     ],
+     "ece": 0.05289999999999999,
+     "acc_at_80": 0.94375,
+     "acc_at_50": 0.94,
+     "server_ms_median": 105.0,
+     "wall_ms_median": 975.0,
+     "in_tok": 75056,
+     "out_tok": 6200,
+     "cost_per_1k_items": 0.01576176
+    },
+    "luna": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.655,
+     "ci": [
+      0.59,
+      0.72
+     ],
+     "ece": 0.3348,
+     "acc_at_80": 0.6375,
+     "acc_at_50": 0.57,
+     "server_ms_median": 675.5,
+     "wall_ms_median": 977.5,
+     "in_tok": 39943,
+     "out_tok": 3790,
+     "cost_per_1k_items": 0.062683
+    },
+    "luna-low": {
+     "n": 200,
+     "metric": "accuracy",
+     "value": 0.63,
+     "ci": [
+      0.565,
+      0.695
+     ],
+     "ece": 0.35495,
+     "acc_at_80": 0.59375,
+     "acc_at_50": 0.56,
+     "server_ms_median": 812.0,
+     "wall_ms_median": 1110.0,
+     "in_tok": 39943,
+     "out_tok": 6970,
+     "cost_per_1k_items": 0.08176300000000002
+    }
+   }
+  },
+  "xnli_ar": {
+   "title": "Natural language inference - XNLI (Arabic)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config ar split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.74,
+     "ci": [
+      0.6666666666666666,
+      0.8066666666666666
+     ],
+     "ece": 0.11473333333333338,
+     "acc_at_80": 0.825,
+     "acc_at_50": 0.88,
+     "server_ms_median": 103.5,
+     "wall_ms_median": 976.5,
+     "in_tok": 78307,
+     "out_tok": 6434,
+     "cost_per_1k_items": 0.02192596
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.74,
+     "ci": [
+      0.6666666666666666,
+      0.8133333333333334
+     ],
+     "ece": 0.2436666666666667,
+     "acc_at_80": 0.75,
+     "acc_at_50": 0.76,
+     "server_ms_median": 696.5,
+     "wall_ms_median": 1009.5,
+     "in_tok": 44610,
+     "out_tok": 2984,
+     "cost_per_1k_items": 0.083352
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.6666666666666666,
+     "ci": [
+      0.5866666666666667,
+      0.74
+     ],
+     "ece": 0.306,
+     "acc_at_80": 0.7083333333333334,
+     "acc_at_50": 0.8133333333333334,
+     "server_ms_median": 1231.5,
+     "wall_ms_median": 1520.5,
+     "in_tok": 44610,
+     "out_tok": 11788,
+     "cost_per_1k_items": 0.15378399999999998
+    }
+   }
+  },
+  "xnli_en": {
+   "title": "Natural language inference - XNLI (English)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config en split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.86,
+     "ci": [
+      0.8066666666666666,
+      0.9133333333333333
+     ],
+     "ece": 0.03700000000000007,
+     "acc_at_80": 0.95,
+     "acc_at_50": 0.9866666666666667,
+     "server_ms_median": 114.5,
+     "wall_ms_median": 975.0,
+     "in_tok": 72212,
+     "out_tok": 6478,
+     "cost_per_1k_items": 0.02021936
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.8466666666666667,
+     "ci": [
+      0.7866666666666666,
+      0.9
+     ],
+     "ece": 0.13813333333333333,
+     "acc_at_80": 0.8583333333333333,
+     "acc_at_50": 0.9333333333333333,
+     "server_ms_median": 660.0,
+     "wall_ms_median": 963.0,
+     "in_tok": 43476,
+     "out_tok": 3032,
+     "cost_per_1k_items": 0.082224
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.86,
+     "ci": [
+      0.8066666666666666,
+      0.9133333333333333
+     ],
+     "ece": 0.12059999999999998,
+     "acc_at_80": 0.9,
+     "acc_at_50": 0.92,
+     "server_ms_median": 843.0,
+     "wall_ms_median": 1137.0,
+     "in_tok": 43476,
+     "out_tok": 5913,
+     "cost_per_1k_items": 0.105272
+    }
+   }
+  },
+  "xnli_fr": {
+   "title": "Natural language inference - XNLI (French)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config fr split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7733333333333333,
+     "ci": [
+      0.7066666666666667,
+      0.84
+     ],
+     "ece": 0.09139999999999998,
+     "acc_at_80": 0.8416666666666667,
+     "acc_at_50": 0.96,
+     "server_ms_median": 94.5,
+     "wall_ms_median": 963.5,
+     "in_tok": 73829,
+     "out_tok": 6444,
+     "cost_per_1k_items": 0.020672120000000002
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.74,
+     "ci": [
+      0.6733333333333333,
+      0.8066666666666666
+     ],
+     "ece": 0.242,
+     "acc_at_80": 0.775,
+     "acc_at_50": 0.8,
+     "server_ms_median": 691.5,
+     "wall_ms_median": 1003.5,
+     "in_tok": 44616,
+     "out_tok": 2992,
+     "cost_per_1k_items": 0.083424
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.74,
+     "ci": [
+      0.6666666666666666,
+      0.8066666666666666
+     ],
+     "ece": 0.23273333333333335,
+     "acc_at_80": 0.775,
+     "acc_at_50": 0.8666666666666667,
+     "server_ms_median": 1069.5,
+     "wall_ms_median": 1384.5,
+     "in_tok": 44616,
+     "out_tok": 9240,
+     "cost_per_1k_items": 0.133408
+    }
+   }
+  },
+  "xnli_hi": {
+   "title": "Natural language inference - XNLI (Hindi)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config hi split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7066666666666667,
+     "ci": [
+      0.6333333333333333,
+      0.78
+     ],
+     "ece": 0.14233333333333334,
+     "acc_at_80": 0.75,
+     "acc_at_50": 0.8933333333333333,
+     "server_ms_median": 110.0,
+     "wall_ms_median": 972.5,
+     "in_tok": 80263,
+     "out_tok": 6442,
+     "cost_per_1k_items": 0.022473640000000003
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7066666666666667,
+     "ci": [
+      0.6266666666666667,
+      0.78
+     ],
+     "ece": 0.276,
+     "acc_at_80": 0.7,
+     "acc_at_50": 0.68,
+     "server_ms_median": 707.5,
+     "wall_ms_median": 1018.5,
+     "in_tok": 45776,
+     "out_tok": 2980,
+     "cost_per_1k_items": 0.08487466666666668
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.6333333333333333,
+     "ci": [
+      0.5533333333333333,
+      0.7066666666666667
+     ],
+     "ece": 0.3320666666666667,
+     "acc_at_80": 0.6833333333333333,
+     "acc_at_50": 0.7733333333333333,
+     "server_ms_median": 1251.0,
+     "wall_ms_median": 1592.0,
+     "in_tok": 45776,
+     "out_tok": 12620,
+     "cost_per_1k_items": 0.16199466666666668
+    }
+   }
+  },
+  "xnli_sw": {
+   "title": "Natural language inference - XNLI (Swahili)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config sw split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7,
+     "ci": [
+      0.62,
+      0.7666666666666667
+     ],
+     "ece": 0.14906666666666674,
+     "acc_at_80": 0.75,
+     "acc_at_50": 0.8133333333333334,
+     "server_ms_median": 108.5,
+     "wall_ms_median": 981.0,
+     "in_tok": 74381,
+     "out_tok": 6428,
+     "cost_per_1k_items": 0.02082668
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.6266666666666667,
+     "ci": [
+      0.54,
+      0.7066666666666667
+     ],
+     "ece": 0.35380000000000006,
+     "acc_at_80": 0.6666666666666666,
+     "acc_at_50": 0.7066666666666667,
+     "server_ms_median": 747.0,
+     "wall_ms_median": 1044.5,
+     "in_tok": 44919,
+     "out_tok": 2966,
+     "cost_per_1k_items": 0.08362
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.6866666666666666,
+     "ci": [
+      0.62,
+      0.76
+     ],
+     "ece": 0.27953333333333336,
+     "acc_at_80": 0.7166666666666667,
+     "acc_at_50": 0.7866666666666666,
+     "server_ms_median": 1297.0,
+     "wall_ms_median": 1604.0,
+     "in_tok": 44919,
+     "out_tok": 14015,
+     "cost_per_1k_items": 0.17201200000000003
+    }
+   }
+  },
+  "xnli_zh": {
+   "title": "Natural language inference - XNLI (Chinese)",
+   "category": "multilingual",
+   "primitive": "choice",
+   "metric": "accuracy",
+   "source": "facebook/xnli config zh split test; 15 random 100-row blocks (seed 7), 150 rows balanced 50/50/50 over the three labels; XNLI is parallel so the same 150 row indices are used in all six language tasks",
+   "n_items": 150,
+   "scores": {
+    "jev": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7933333333333333,
+     "ci": [
+      0.7333333333333333,
+      0.8533333333333334
+     ],
+     "ece": 0.11513333333333332,
+     "acc_at_80": 0.85,
+     "acc_at_50": 0.88,
+     "server_ms_median": 110.0,
+     "wall_ms_median": 976.0,
+     "in_tok": 73919,
+     "out_tok": 6452,
+     "cost_per_1k_items": 0.020697320000000005
+    },
+    "luna": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7466666666666667,
+     "ci": [
+      0.6733333333333333,
+      0.82
+     ],
+     "ece": 0.23719999999999997,
+     "acc_at_80": 0.7333333333333333,
+     "acc_at_50": 0.76,
+     "server_ms_median": 667.5,
+     "wall_ms_median": 1028.5,
+     "in_tok": 43921,
+     "out_tok": 2990,
+     "cost_per_1k_items": 0.08248133333333334
+    },
+    "luna-low": {
+     "n": 150,
+     "metric": "accuracy",
+     "value": 0.7133333333333334,
+     "ci": [
+      0.6466666666666666,
+      0.7866666666666666
+     ],
+     "ece": 0.26033333333333336,
+     "acc_at_80": 0.75,
+     "acc_at_50": 0.84,
+     "server_ms_median": 1091.0,
+     "wall_ms_median": 1423.0,
+     "in_tok": 43921,
+     "out_tok": 10327,
+     "cost_per_1k_items": 0.1411773333333333
+    }
+   }
+  }
+ },
+ "models": {
+  "jev": {
+   "in_tok": 7352377,
+   "out_tok": 513573,
+   "items": 8225,
+   "cost": 0.30879983400000005
+  },
+  "luna": {
+   "in_tok": 5626882,
+   "out_tok": 155623,
+   "items": 8225,
+   "cost": 1.312124
+  },
+  "luna-low": {
+   "in_tok": 5626882,
+   "out_tok": 339712,
+   "items": 8225,
+   "cost": 1.5330308000000001
+  }
+ }
+}
